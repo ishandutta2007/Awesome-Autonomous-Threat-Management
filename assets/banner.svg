@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b19" />
+      <stop offset="50%" stop-color="#0a122c" />
+      <stop offset="100%" stop-color="#050814" />
+    </linearGradient>
+
+    <linearGradient id="cyberCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#4facfe" />
+      <stop offset="100%" stop-color="#00f2fe" />
+    </linearGradient>
+
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#7928ca" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#ff0080" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="accentPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7928ca" />
+      <stop offset="100%" stop-color="#ff0080" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1f2d5a" stroke-width="0.7" opacity="0.35" />
+    </pattern>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      letter-spacing: -0.5px;
+      fill: #ffffff;
+    }
+    .subtitle-text {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      fill: #38bdf8;
+      letter-spacing: 0.5px;
+    }
+    .tagline-text {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      fill: #94a3b8;
+    }
+    .pill-text {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: #e2e8f0;
+    }
+
+    /* Dynamic CSS animations for SVG */
+    @keyframes pulseOrb {
+      0% { transform: scale(1); opacity: 0.25; }
+      50% { transform: scale(1.18); opacity: 0.45; }
+      100% { transform: scale(1); opacity: 0.25; }
+    }
+    @keyframes scanLine {
+      0% { transform: translateY(-50px); opacity: 0; }
+      30% { opacity: 0.6; }
+      70% { opacity: 0.6; }
+      100% { transform: translateY(450px); opacity: 0; }
+    }
+    @keyframes radarSweep {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes floatPill {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
+    }
+
+    .orb-glow {
+      transform-origin: center;
+      animation: pulseOrb 6s ease-in-out infinite;
+    }
+    .scan-beam {
+      animation: scanLine 7s linear infinite;
+    }
+    .radar-rotator {
+      transform-origin: 1040px 210px;
+      animation: radarSweep 10s linear infinite;
+    }
+    .pill-animated {
+      animation: floatPill 4s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="420" fill="url(#bgGrad)" rx="16" />
+
+  <!-- Cyber Grid Pattern -->
+  <rect width="1200" height="420" fill="url(#grid)" rx="16" />
+
+  <!-- Background Dynamic Ambient Orbs (placed strictly in background) -->
+  <circle class="orb-glow" cx="180" cy="120" r="140" fill="#00f2fe" />
+  <circle class="orb-glow" cx="950" cy="300" r="180" fill="#7928ca" style="animation-delay: -3s;" />
+  <circle class="orb-glow" cx="1040" cy="180" r="130" fill="#ff0080" style="animation-delay: -1.5s;" />
+
+  <!-- Scanning line across the grid -->
+  <line class="scan-beam" x1="0" y1="0" x2="1200" y2="0" stroke="url(#cyberCyan)" stroke-width="2" opacity="0.6" />
+
+  <!-- Background Cyber Shield & Radar Matrix on Right Side -->
+  <g opacity="0.85">
+    <!-- Concentric radar rings -->
+    <circle cx="1040" cy="210" r="140" fill="none" stroke="#1e293b" stroke-width="2" />
+    <circle cx="1040" cy="210" r="105" fill="none" stroke="#334155" stroke-dasharray="4,6" stroke-width="1.5" />
+    <circle cx="1040" cy="210" r="70" fill="none" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1.5" />
+    <circle cx="1040" cy="210" r="35" fill="none" stroke="#00f2fe" stroke-opacity="0.5" stroke-width="1" />
+    
+    <!-- Rotating radar beam -->
+    <g class="radar-rotator">
+      <path d="M 1040 210 L 1180 210 A 140 140 0 0 0 1140 110 Z" fill="url(#shieldGrad)" opacity="0.25" />
+      <line x1="1040" y1="210" x2="1180" y2="210" stroke="#00f2fe" stroke-width="1.5" filter="url(#subtleGlow)" />
+    </g>
+
+    <!-- Outer Decorative Shield Contour -->
+    <path d="M 1040 100 L 1130 140 V 230 C 1130 290 1040 330 1040 330 C 1040 330 950 290 950 230 V 140 Z" 
+          fill="none" stroke="url(#shieldGrad)" stroke-width="3" filter="url(#subtleGlow)" />
+
+    <!-- AI Core Node Icon -->
+    <circle cx="1040" cy="210" r="16" fill="#0f172a" stroke="#00f2fe" stroke-width="2.5" />
+    <circle cx="1040" cy="210" r="7" fill="#00f2fe" filter="url(#subtleGlow)" />
+  </g>
+
+  <!-- Left Accent Tech Line -->
+  <line x1="70" y1="90" x2="70" y2="330" stroke="url(#shieldGrad)" stroke-width="4" stroke-linecap="round" filter="url(#subtleGlow)" />
+
+  <!-- FOREGROUND: Content Elements (Guaranteed crisp and unobstructed) -->
+  <g transform="translate(100, 0)">
+    <!-- Top Cyber Badge -->
+    <g transform="translate(0, 82)">
+      <rect x="0" y="0" width="220" height="28" rx="14" fill="#0369a1" fill-opacity="0.35" stroke="#0284c7" stroke-width="1" />
+      <circle cx="14" cy="14" r="5" fill="#00f2fe" filter="url(#subtleGlow)" />
+      <text x="27" y="19" class="pill-text" fill="#38bdf8" font-size="12">AUTONOMOUS SecOps &amp; XDR</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="160" class="title-text">
+      Awesome Autonomous
+    </text>
+    <text x="0" y="210" class="title-text" fill="url(#cyberCyan)" filter="url(#subtleGlow)">
+      Threat Management
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="254" class="subtitle-text">
+      Curated SaaS Platforms &amp; Open-Source Defense Ecosystems
+    </text>
+
+    <!-- Tagline -->
+    <text x="0" y="286" class="tagline-text">
+      Self-learning AI, real-time telemetry, automated triage, and intelligent incident remediation.
+    </text>
+
+    <!-- Interactive / Status Pills -->
+    <g class="pill-animated" transform="translate(0, 318)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="112" height="34" rx="17" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+        <text x="18" y="22" class="pill-text">🛡️ AI Defense</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(122, 0)">
+        <rect width="118" height="34" rx="17" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+        <text x="18" y="22" class="pill-text">⚡ Auto-XDR</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(250, 0)">
+        <rect width="138" height="34" rx="17" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+        <text x="18" y="22" class="pill-text">🔍 Open-Source</text>
+      </g>
+      <!-- Pill 4 -->
+      <g transform="translate(398, 0)">
+        <rect width="130" height="34" rx="17" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+        <text x="18" y="22" class="pill-text">🌐 Cloud SecOps</text>
+      </g>
+    </g>
+  </g>
+</svg>
