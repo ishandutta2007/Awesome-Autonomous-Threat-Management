@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Autonomous-Threat-Management/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Autonomous-Threat-Management?style=social" alt="GitHub stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Autonomous-Threat-Management/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Autonomous-Threat-Management?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Autonomous-Threat-Management/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Autonomous-Threat-Management?style=social" alt="GitHub forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Autonomous-Threat-Management/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License: MIT" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -64,9 +64,9 @@ The table below benchmarks enterprise SaaS and cloud platforms delivering automa
 
 ## 🔓 Open-Source GitHub Projects
 
-Open-source threat detection, response orchestration, and observability engines enable transparent, self-hosted, and community-driven autonomous security pipelines. Repositories below are sorted descending by **GitHub Stargazer Count** and feature white social star badges linking directly to their stargazers page.
+Open-source threat detection, response orchestration, and observability engines enable transparent, self-hosted, and community-driven autonomous security pipelines. Repositories below are sorted descending by **GitHub Stargazer Count** and feature white social Stars_Badges linking directly to their stargazers page.
 
-| Project & Repository | GitHub Star Count | Category / Domain | Description & Threat Management Role |
+| Project & Repository | GitHub Stars_Count | Category / Domain | Description & Threat Management Role |
 | :--- | :---: | :--- | :--- |
 | **[osquery](https://github.com/osquery/osquery)** | [![Stars](https://img.shields.io/github/stars/osquery/osquery?style=social&color=white)](https://github.com/osquery/osquery/stargazers) | Endpoint Visibility & Telemetry | SQL-powered operating system instrumentation framework. Exposes underlying OS state as a relational database to fuel automated intrusion detection scripts and host monitoring pipelines. |
 | **[Wazuh](https://github.com/wazuh/wazuh)** | [![Stars](https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white)](https://github.com/wazuh/wazuh/stargazers) | Unified XDR & SIEM Platform | Industry-leading open-source XDR and SIEM engine. Provides cross-platform endpoint agents, file integrity monitoring (FIM), vulnerability detection, rootkit scanning, and active response command automation. |
@@ -111,7 +111,7 @@ Contributions from the cybersecurity community are enthusiastically encouraged!
 2. 🌿 **Create a descriptive feature branch** (`git checkout -b add-autonomous-tool`).
 3. 📝 **Add or edit entries in `README.md`**:
    - For **SaaS platforms**, ensure the entry fits in the table and includes specific pricing, trial/free tier durations, company valuation/revenue, and capability descriptions.
-   - For **Open-Source projects**, include the project name, official repo link, category, description, and white social star badge linking to its `/stargazers` page.
+   - For **Open-Source projects**, include the project name, official repo link, category, description, and white social Stars_Badge linking to its `/stargazers` page.
 4. 💬 **Commit your changes** with a meaningful commit message (`git commit -m 'feat: add ProjectX to open-source threat management'`).
 5. 🚀 **Push to your branch** (`git push origin add-autonomous-tool`).
 6. 📬 **Open a Pull Request** describing your additions and why they qualify under autonomous threat management.
